@@ -955,11 +955,11 @@
                       <!-- Contact Form Reply Group End -->
           
                       <!-- Contact Form Start -->
-                      <form class="form form-dark contact-form" id="contact-form">
-                        <!-- Hidden Required Fields -->
-                        <input type="hidden" name="project_name" value="Shreyank Jadiya - Shopify Developer">
-                        <input type="hidden" name="admin_email" value="shreyankjadiya120@gmail.com">
-                        <input type="hidden" name="form_subject" value="Contact Form Message">
+                      <form class="form form-dark contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" >
+                        <!-- Hidden Required Fields for web3Forms -->
+                        <input type="hidden" name="access_key" value="5edabdcb-a8fb-41c6-99d6-ac1d984407ba" />
+                        <input type="hidden" name="subject" value="New Message from shreyankjadiya.com" />
+                        <input type="checkbox" name="botcheck" id="" style="display: none;" />
                         <!-- END Hidden Required Fields-->
                         <div class="container-fluid px-0">
                           <div class="row gx-5">
@@ -1092,12 +1092,13 @@
           <!-- Reply Messages End-->
 
           <!-- Notify Contact Form Start-->
-          <form class="form notify-custom-form form-dark" id="notify-form">
+          <form class="form notify-custom-form form-dark" id="notify-form" action="https://api.web3forms.com/submit" method="POST" >
              <!-- Hidden Required Fields -->
-             <input type="hidden" name="project_name" value="Get Free Consultation">
-             <input type="hidden" name="admin_email" value="shreyankjadiya120@gmail.com">
-             <input type="hidden" name="consultation_subject" value="Email of the User">
-            <input class="margin-l" type="email" placeholder="Your Email" required>
+             <input type="hidden" name="access_key" value="5edabdcb-a8fb-41c6-99d6-ac1d984407ba" />
+             <input type="hidden" name="subject" value="Consultation Request from shreyankjadiya.com" />
+             <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+            <input class="margin-l" type="email" placeholder="Your Email" name="email" required>
             <button class="btn btn-l" type="submit">
               <span class="btn__background dark"></span>
               <span class="btn__text light">

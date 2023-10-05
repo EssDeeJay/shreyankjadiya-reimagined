@@ -172,7 +172,7 @@ $(function() {
   // --------------------------------------------- //
   // Mailchimp Notify Form Start
   // --------------------------------------------- //
-  $('.notify-form').ajaxChimp({
+  $('.mailc-notify-form').ajaxChimp({
     callback: mailchimpCallback,
     url: 'https://besaba.us10.list-manage.com/subscribe/post?u=e8d650c0df90e716c22ae4778&amp;id=54a7906900'
   });
@@ -205,12 +205,60 @@ $(function() {
   // --------------------------------------------- //
   // Contact Form Start
   // --------------------------------------------- //
+ /* const form = document.getElementById("#contact-form");
+
+  if(form){
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      const formData = new FormData(form);
+     
+      var object = {};
+      formData.forEach((value, key) => {
+        object[key] = value;
+      });
+  
+      var json = JSON.stringify(object);
+      
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      })
+      .then(async (response) => {
+        if(response.status == 200){
+          $('.contact').find('.form').addClass('is-hidden');
+          $('.contact').find('.reply-group').addClass('is-visible');
+			setTimeout(function() {
+				// Done Functions
+        $('.contact').find('.reply-group').removeClass('is-visible');
+        $('.contact').find('.form').delay(300).removeClass('is-hidden');
+				form.reset();
+			}, 5000);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .then(function(){
+        return false;
+      })
+    })
+  } */
+
   $("#contact-form").submit(function() { //Change
 		var th = $(this);
+
 		$.ajax({
 			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
+			url: "https://api.web3forms.com/submit", //Change
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+			data: th.serialize().json()
 		}).done(function() {
       $('.contact').find('.form').addClass('is-hidden');
       $('.contact').find('.reply-group').addClass('is-visible');
@@ -222,7 +270,7 @@ $(function() {
 			}, 5000);
 		});
 		return false;
-	});
+	}); 
   // --------------------------------------------- //
   // Contact Form End
   // --------------------------------------------- //
@@ -230,12 +278,13 @@ $(function() {
   // --------------------------------------------- //
   // Get in Touch Form Start
   // --------------------------------------------- //
+
   $("#notify-form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "mail2.php", //Change
-			data: th.serialize()
+			url: "https://api.web3forms.com/submit", //Change
+			data: th.serialize().json()
 		}).done(function() {
       $('.notify').find('.form').addClass('is-hidden');
       $('.notify').find('.subscription-ok').addClass('is-visible');
@@ -247,7 +296,7 @@ $(function() {
       }, 5000);
 		});
 		return false;
-	});
+	}); 
   // --------------------------------------------- //
   // Get in Touch Form End
   // --------------------------------------------- //

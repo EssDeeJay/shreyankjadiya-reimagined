@@ -1924,11 +1924,14 @@ form .inputs-description {
   z-index: 2;
 }
 .header__logo img {
-  width: auto;
+  width: 180px;
 }
 @media only screen and (min-width: 768px) {
   .header__logo {
     left: 5rem;
+  }
+  .header__logo img {
+    width: 220px;
   }
 }
 @media only screen and (min-width: 1400px) {

@@ -1,17 +1,4 @@
 // ------------------------------------------------
-// Project Name: Emeric - Coming Soon and Portfolio Template
-// Project Description: Emeric - clean and functional coming soon and portfolio template to kick-start your project
-// Tags: mix_design, coming soon, under construction, template, landing page, portfolio, one page, responsive, html5, css3, creative, clean, agency, personal page
-// Version: 1.0.0
-// Build Date: September 2023
-// Last Update: September 2023
-// This product is available exclusively on Themeforest
-// Author: mix_design
-// Author URI: https://themeforest.net/user/mix_design
-// File name: custom.js
-// ------------------------------------------------
-
-// ------------------------------------------------
 // Table of Contents
 // ------------------------------------------------
 //
